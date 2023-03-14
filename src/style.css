@@ -7,6 +7,11 @@
   font-family: 'Roboto', sans-serif;
 }
 
+#root {
+  position: relative;
+  min-height: 100vh;
+}
+
 header {
   background-color: #ef0e3d;
   display: flex;
@@ -33,7 +38,7 @@ img {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px 20px 62px 20px;
 }
 
 .score_wrapper {
@@ -92,4 +97,17 @@ img {
   margin-top: 50px;
   font-size: 24px;
   font-weight: 400;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 42px;
+  width: 100%;
+  background-color: #383838;
+  color: #eeeeee;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
