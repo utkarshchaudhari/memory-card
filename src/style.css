@@ -76,6 +76,11 @@ img {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
   text-align: center;
   cursor: pointer;
+  transition: 200ms ease-in-out;
+}
+
+.card_wrapper:hover {
+  transform: scale(1.1);
 }
 
 .card_img {

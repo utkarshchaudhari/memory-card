@@ -1,14 +1,16 @@
 import React from 'react';
 
 function Card(props) {
+  const name = props.card.name;
+  const cName = name.charAt(0).toUpperCase().concat(name.slice(1));
   return (
     <div className="card_wrapper">
       <img
         className="card_img"
         src={props.card.sprites.other.dream_world.front_default}
-        alt={props.card.name}
+        alt={cName}
       />
-      <p className="card_title">{props.card.name}</p>
+      <p className="card_title">{cName}</p>
     </div>
   );
 }
