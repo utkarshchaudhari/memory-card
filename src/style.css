@@ -17,20 +17,74 @@ header {
 
 img {
   display: block;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .logo_img {
   height: auto;
-  width: 100%;
   max-width: 700px;
 }
 
 .header_border {
   height: 20px;
   background-color: #383838;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.score_wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.current_score,
+.best_score {
+  font-size: 20px;
+  color: #383838;
+  text-align: center;
+  padding: 5px;
+  border-radius: 20px;
+  width: 250px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+.current_score {
+  background-color: #ffb5b5;
+}
+
+.best_score {
+  background-color: #b5ffb5;
+}
+
+.cards_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.card_wrapper {
+  width: 250px;
+  height: 300px;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  cursor: pointer;
+}
+
+.card_img {
+  height: 150px;
+}
+
+.card_title {
+  color: #383838;
+  margin-top: 50px;
+  font-size: 24px;
+  font-weight: 400;
 }
