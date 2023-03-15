@@ -4,6 +4,7 @@ import Cards from './Cards';
 function Main() {
   const [data, setData] = useState([]);
   const [currentScore, setCurrentScore] = useState(0);
+  const [bestScore, setBestScore] = useState(0);
   const [clickedCard, setClickedCard] = useState([]);
 
   useEffect(() => {
@@ -27,8 +28,12 @@ function Main() {
       setClickedCard([]);
       setCurrentScore(0);
     } else {
+      const newScore = currentScore + 1;
       setClickedCard([...clickedCard, id]);
-      setCurrentScore(currentScore + 1);
+      setCurrentScore(newScore);
+      if (newScore > bestScore) {
+        setBestScore(newScore);
+      }
     }
   }
 
@@ -36,7 +41,7 @@ function Main() {
     <div className="container">
       <div className="score_wrapper">
         <div className="current_score">Current score: {currentScore}</div>
-        <div className="best_score">Best score: 0</div>
+        <div className="best_score">Best score: {bestScore}</div>
       </div>
       <Cards data={data} updateScore={updateScore} />
     </div>
