@@ -6,9 +6,13 @@ function Cards(props) {
   const data = props.data;
   return (
     <div className="cards_wrapper">
-      {data.map((card) => {
-        return <Card card={card} key={uuidv4()} />;
-      })}
+      {data
+        .sort((a, b) => 0.5 - Math.random())
+        .map((card) => {
+          return (
+            <Card card={card} key={uuidv4()} updateScore={props.updateScore} />
+          );
+        })}
     </div>
   );
 }
